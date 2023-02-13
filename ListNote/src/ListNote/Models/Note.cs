@@ -1,4 +1,4 @@
-namespace UpdateNote.Models;
+namespace ListNote.Models;
 
 public class Note
 {

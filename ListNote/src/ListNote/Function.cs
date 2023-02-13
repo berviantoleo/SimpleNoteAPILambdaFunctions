@@ -2,7 +2,7 @@ using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
-using UpdateNote.Models;
+using ListNote.Models;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
@@ -29,10 +29,10 @@ public class Function
         };
         if (specificId)
         {
-            queryRequest.FilterExpression = "Id = :v_Id";
+            queryRequest.FilterExpression = "id = :v_id";
             queryRequest.ExpressionAttributeValues = new Dictionary<string, AttributeValue>()
             {
-                {":v_Id", new AttributeValue() { S = dataRequest["id"] }}
+                {":v_id", new AttributeValue() { S = dataRequest["id"] }}
             };
         }
 

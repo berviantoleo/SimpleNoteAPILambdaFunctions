@@ -9,7 +9,7 @@
   "region": "ap-southeast-3",
   "configuration": "Release",
   "function-architecture": "x86_64",
-  "function-runtime": "dotnet6",
+  "function-runtime": "dotnet8",
   "function-memory-size": 256,
   "function-timeout": 30,
   "function-handler": "DeleteNote::DeleteNote.Function::DeleteNoteAsync"
